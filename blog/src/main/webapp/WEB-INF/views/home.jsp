@@ -7,7 +7,7 @@
 <body>
 <h1>
 	Hello world!
-	jenkins..
+	jenkins.. 자동배포?
 </h1>
 
 <P>  The time on the server is ${serverTime}. </P>
