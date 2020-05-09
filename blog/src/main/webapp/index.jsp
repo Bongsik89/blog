@@ -8,5 +8,6 @@
 </head>
 <body>
 <p>Index Page..</p>
+<p>git 연동확인</p>
 </body>
 </html>
