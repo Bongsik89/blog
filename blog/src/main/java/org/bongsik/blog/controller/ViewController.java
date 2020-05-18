@@ -1,5 +1,10 @@
 package org.bongsik.blog.controller;
 
+import java.util.List;
+
+import org.bongsik.blog.service.BoardService;
+import org.bongsik.blog.vo.BoardVO;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -8,8 +13,13 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("view/*")
 public class ViewController {
 	
+	@Autowired
+	BoardService boardService;
+	
 	@RequestMapping("view/dashboard")
 	public ModelAndView dashboard() {
+		List<BoardVO> result = boardService.getBoardList();
+		System.out.println(result);
 		ModelAndView mav = new ModelAndView();
 		
 		return mav;
