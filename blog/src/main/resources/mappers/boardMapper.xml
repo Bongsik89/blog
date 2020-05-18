@@ -4,6 +4,6 @@
 <mapper namespace="mappers.boardMapper">
 
 <select id="getBoardList" resultType="board">
-select * from board;
+select * from board order BY id DESC;
 </select>
 </mapper>

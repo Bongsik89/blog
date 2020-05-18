@@ -18,9 +18,14 @@ public class ViewController {
 	
 	@RequestMapping("view/dashboard")
 	public ModelAndView dashboard() {
-		List<BoardVO> result = boardService.getBoardList();
-		System.out.println(result);
+		/*
+		 * List<BoardVO> result = boardService.getBoardList();
+		 * System.out.println(result); ModelAndView mav = new ModelAndView();
+		 */
+		
+		List result = boardService.getBoardList();
 		ModelAndView mav = new ModelAndView();
+		mav.addObject("result", result);
 		
 		return mav;
 	}
