@@ -12,7 +12,7 @@ table {
 	border: 1px solid #444444;
 }
 
-tr, td {
+th td {
 	border: 1px solid #444444;
 }
 </style>
@@ -41,11 +41,11 @@ tr, td {
 				</tr>
 
 				<tr>
-					<th>조회수:</th>
+					<th>조회수 : </th>
 					<td>${result.views}</td>
 				</tr>
 				<tr>
-					<th>좋아요:</th>
+					<th>좋아요 : </th>
 					<td>${result.likes}</td>
 				</tr>
 				
