@@ -12,4 +12,13 @@
 		values(#{id},#{subject},#{context},#{attachments},#{likes},#{views},now(),null);
 	</insert>
 
+	<select id="getBoardDetail" resultType="board">
+		SELECT * FROM board where id = #{id};
+	</select>
+
+	<!-- update -->
+	<update id="viewUpdate">
+		UPDATE board SET views = views+1 WHERE id = #{id}
+	</update>
+
 </mapper>

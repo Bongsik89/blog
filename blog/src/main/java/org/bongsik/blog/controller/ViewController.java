@@ -13,35 +13,37 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @RequestMapping("view/*")
 public class ViewController {
-	
+
 	@Autowired
 	BoardService boardService;
-	
+
 	@RequestMapping("view/dashboard")
 	public ModelAndView dashboard() {
 		/*
 		 * List<BoardVO> result = boardService.getBoardList();
 		 * System.out.println(result); ModelAndView mav = new ModelAndView();
 		 */
-		
+
 		List result = boardService.getBoardList();
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("result", result);
-		
+
 		return mav;
 	}
-	
+
 	@RequestMapping(value = "view/boardwrite", method = RequestMethod.GET)
 	public ModelAndView boardwrite() {
 		ModelAndView mav = new ModelAndView();
 		return mav;
 	}
-	
-	/*
-	 * @RequestMapping(value = "view/boardDetail", method = RequestMethod.GET)
-	 * public ModelAndView boardDetail(int id) { boardService.viewsUpdate(id);
-	 * BoardVO result = boardService.getBoardDetil(id); ModelAndView mav = new
-	 * ModelAndView(); mav.addObject("result", result); return mav; }
-	 */
+
+	@RequestMapping(value = "view/boardDetail", method = RequestMethod.GET)
+	public ModelAndView boardDetail(int id) {
+		boardService.viewsUpdate(id);
+		BoardVO result = boardService.getBoardDetail(id);
+		ModelAndView mav = new ModelAndView();
+		mav.addObject("result", result);
+		return mav;
+	}
 
 }

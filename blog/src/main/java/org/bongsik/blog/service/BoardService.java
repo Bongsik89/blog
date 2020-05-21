@@ -8,5 +8,7 @@ public interface BoardService {
 	
 	List getBoardList();
 	int boardwrite(BoardVO boardVO);
+	BoardVO getBoardDetail(int id);
+	void viewsUpdate(int id);
 
 }
