@@ -12,7 +12,7 @@ table {
 	border: 1px solid #444444;
 }
 
-th td {
+th, td {
 	border: 1px solid #444444;
 }
 </style>
