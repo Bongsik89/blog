@@ -16,5 +16,9 @@ public class BoardDAO {
 	public List<BoardVO> getBoardList(){
 		return sqlSession.selectList("getBoardList");
 	}
+	
+	public int boardwrite(BoardVO boardVO) {
+		return sqlSession.insert("boardwrite", boardVO);
+	}
 
 }

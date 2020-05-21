@@ -3,10 +3,10 @@ package org.bongsik.blog.controller;
 import java.util.List;
 
 import org.bongsik.blog.service.BoardService;
-import org.bongsik.blog.vo.BoardVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -27,6 +27,12 @@ public class ViewController {
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("result", result);
 		
+		return mav;
+	}
+	
+	@RequestMapping(value = "view/boardwrite", method = RequestMethod.GET)
+	public ModelAndView boardwrite() {
+		ModelAndView mav = new ModelAndView();
 		return mav;
 	}
 

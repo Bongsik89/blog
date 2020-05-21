@@ -3,7 +3,13 @@
 
 <mapper namespace="mappers.boardMapper">
 
-<select id="getBoardList" resultType="board">
-select * from board order BY id DESC;
-</select>
+	<select id="getBoardList" resultType="board">
+		select * from board order BY id DESC;
+	</select>
+	
+	<insert id="boardwrite">
+		insert into board (id,subject,context,attachments,likes,views,create_time,update_time)
+		values(#{id},#{subject},#{context},#{attachments},#{likes},#{views},now(),null);
+	</insert>
+
 </mapper>
