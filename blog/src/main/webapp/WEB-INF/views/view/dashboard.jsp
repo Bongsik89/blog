@@ -35,7 +35,7 @@ th, td {
 			<fmt:formatDate value="${b.create_time }"
 				pattern="yyyy-MM-dd HH:MM:ss" var="dateFormat_cr" />
 			<tr>
-				<td>${b.subject }</td>
+				<td><a href="/view/boardDetail?id=${b.id }">${b.subject }</a></td>
 				<td>${b.views }</td>
 				<td>${b.likes }</td>
 				<td>${b.attachments }</td>

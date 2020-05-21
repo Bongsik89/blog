@@ -3,6 +3,7 @@ package org.bongsik.blog.controller;
 import java.util.List;
 
 import org.bongsik.blog.service.BoardService;
+import org.bongsik.blog.vo.BoardVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,5 +36,12 @@ public class ViewController {
 		ModelAndView mav = new ModelAndView();
 		return mav;
 	}
+	
+	/*
+	 * @RequestMapping(value = "view/boardDetail", method = RequestMethod.GET)
+	 * public ModelAndView boardDetail(int id) { boardService.viewsUpdate(id);
+	 * BoardVO result = boardService.getBoardDetil(id); ModelAndView mav = new
+	 * ModelAndView(); mav.addObject("result", result); return mav; }
+	 */
 
 }
