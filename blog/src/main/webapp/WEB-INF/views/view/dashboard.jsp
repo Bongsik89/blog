@@ -18,6 +18,7 @@ th, td {
 </style>
 </head>
 <body>
+	<p>환영합니다 ${sessionScope.loginUser.nickname }님 <a href="/jquery/logout">로그아웃</a></p>
 	<p>dashboard 입니다.</p>
 	<div>게시글 리스트</div>
 	<table>

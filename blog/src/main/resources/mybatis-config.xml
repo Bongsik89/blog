@@ -3,9 +3,12 @@
 <configuration>
 <typeAliases>
 <typeAlias alias="board" type="org.bongsik.blog.vo.BoardVO"/>
+<typeAlias alias="members" type="org.bongsik.blog.vo.MembersVO"/>
+
 </typeAliases>
 
 <mappers>
 <mapper resource="mappers/boardMapper.xml"/>
+<mapper resource="mappers/userMapper.xml"/>
 </mappers>
 </configuration>
